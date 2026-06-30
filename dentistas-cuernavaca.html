@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Directorio de Dentistas – Cuernavaca, Morelos</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root { --azul:#1A3A5C;--azul-claro:#2E6DA4;--agua:#D6EAF4;--blanco:#F8FBFD;--gris:#6B7A8A;--gris-borde:#D0DDE8;--acento:#00A8CC;--texto:#1C2B38; }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'DM Sans',sans-serif;background:var(--blanco);color:var(--texto);line-height:1.6;}
+    header{background:var(--azul);color:white;padding:40px 32px 32px;border-bottom:4px solid var(--acento);}
+    header .eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--acento);margin-bottom:10px;}
+    header h1{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,5vw,46px);font-weight:600;line-height:1.15;margin-bottom:10px;}
+    header p{font-size:14px;color:#A8C4D8;max-width:560px;}
+    .header-meta{display:flex;gap:16px;margin-top:24px;flex-wrap:wrap;align-items:center;}
+    .meta-chip{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:20px;padding:6px 16px;font-size:13px;color:#C8DDE9;display:flex;align-items:center;gap:6px;}
+    .meta-chip span{color:white;font-weight:600;}
+    .contador{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:6px 16px;font-size:13px;color:#C8DDE9;}
+    .contador span{color:white;font-weight:700;font-size:15px;}
+    main{max-width:1100px;margin:0 auto;padding:40px 24px 60px;}
+    .section-title{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:var(--azul);margin-bottom:6px;display:flex;align-items:center;gap:10px;}
+    .section-title::after{content:'';flex:1;height:1px;background:var(--gris-borde);}
+    .section-sub{font-size:13px;color:var(--gris);margin-bottom:20px;}
+    .mapa-container{border-radius:12px;overflow:hidden;border:1px solid var(--gris-borde);box-shadow:0 4px 20px rgba(26,58,92,.08);margin-bottom:48px;}
+    .mapa-container iframe{width:100%;height:440px;display:block;border:none;}
+    .table-wrapper{overflow-x:auto;border-radius:12px;border:1px solid var(--gris-borde);box-shadow:0 2px 12px rgba(26,58,92,.06);}
+    table{width:100%;border-collapse:collapse;font-size:13.5px;}
+    thead{background:var(--azul);color:white;}
+    thead th{padding:14px 16px;text-align:left;font-weight:500;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;}
+    tbody tr{border-bottom:1px solid var(--gris-borde);transition:background .15s;}
+    tbody tr:last-child{border-bottom:none;}
+    tbody tr:hover{background:var(--agua);}
+    tbody tr.visitado{background:#f0faf3;}
+    tbody td{padding:13px 16px;vertical-align:middle;}
+    .num{font-weight:700;color:var(--acento);font-size:15px;}
+    .nombre{font-weight:600;color:var(--azul);}
+    .zona{font-size:11px;color:var(--gris);margin-top:2px;}
+    .tel{display:inline-flex;align-items:center;gap:5px;background:var(--agua);border-radius:20px;padding:3px 10px;font-size:12.5px;color:var(--azul-claro);font-weight:500;white-space:nowrap;}
+    .horario{font-size:12.5px;color:var(--gris);line-height:1.5;}
+    .horario strong{color:var(--texto);font-weight:500;}
+    .btn-visita{background:none;border:2px solid var(--gris-borde);border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s;margin:0 auto;}
+    .btn-visita:hover{border-color:#27ae60;background:#eafaf1;}
+    .btn-visita::after{content:'✓';color:#ccc;font-weight:700;}
+    .btn-visita.hecho{border-color:#27ae60;background:#27ae60;}
+    .btn-visita.hecho::after{color:white;}
+    .nota{margin-top:28px;background:var(--agua);border-left:3px solid var(--acento);border-radius:0 8px 8px 0;padding:14px 18px;font-size:13px;color:var(--azul);}
+    footer{background:var(--azul);color:#A8C4D8;text-align:center;padding:20px;font-size:12px;}
+    footer strong{color:white;}
+    .zona-header td{background:#f0f5fa;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--azul-claro);font-weight:600;padding:8px 16px;border-bottom:1px solid var(--gris-borde);}
+    @media(max-width:640px){table{font-size:12px;}thead th,tbody td{padding:10px 10px;}.mapa-container iframe{height:280px;}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="eyebrow">Prospección Comercial · Agua Desmineralizada</div>
+  <h1>Directorio de Dentistas<br>Cuernavaca, Morelos</h1>
+  <p>Consultorios y clínicas dentales identificados para visita con muestra de producto.</p>
+  <div class="header-meta">
+    <div class="meta-chip">📍 Zona: <span>Cuernavaca, Mor.</span></div>
+    <div class="meta-chip">🦷 Consultorios: <span>33</span></div>
+    <div class="meta-chip">📅 Fecha: <span>Junio 2026</span></div>
+    <div class="contador">✅ Visitados: <span id="contVisitados">0</span> / 33</div>
+  </div>
+</header>
+<main>
+  <div style="margin-bottom:8px;margin-top:8px;">
+    <div class="section-title">🗺️ Mapa Cuernavaca</div>
+    <p class="section-sub">Ubicación de los consultorios en Cuernavaca. Haz clic en "Ver mapa más grande" para abrir en Google Maps.</p>
+  </div>
+  <div class="mapa-container">
+    <iframe src="https://maps.google.com/maps?q=dentistas+Cuernavaca+Morelos+Mexico&t=m&z=13&output=embed&iwloc=near" allowfullscreen loading="lazy"></iframe>
+  </div>
+  <div style="margin-bottom:8px;">
+    <div class="section-title">📋 Directorio de Consultorios</div>
+    <p class="section-sub">Da clic en ✓ para marcar un consultorio como visitado.</p>
+  </div>
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th><th>Consultorio</th><th>Teléfono</th><th>Dirección</th><th>Horario</th><th style="text-align:center;">Visitado</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr class="zona-header"><td colspan="6">📍 Centro / Palacio</td></tr>
+
+        <tr id="row-1"><td class="num">1</td><td><div class="nombre">Consultorio Dental Endodent GRT</div></td><td><span class="tel">📞 777 139 8904</span></td><td>Lerdo de Tejada 10 Bis, Centro</td><td class="horario"><strong>Lun–Vie</strong> 9am–6pm<br><strong>Sáb</strong> 9am–3pm</td><td style="text-align:center;"><button class="btn-visita" onclick="toggleVisita(1)" id="btn-1"></button></td></tr>
+
+        <tr id="row-2"><td class="num">2</td><td><div class="nombre">Especialidades Dentales Centro</div></td><td><span class="tel">📞 777 310 1156</span></td><td>C. de Salazar 2, Centro</td><td class="horario"><strong>Lun–Vie</strong> 8am–8pm<br><strong>Sáb</strong> 10am–7pm</td><td style="text-align:center;"><button class="btn-visita" onclick="toggleVisita(2)" id="btn-2"></button></td></tr>
+
+        <tr id="row-3"><td class="num">3</td><td><div class="nombre">Centro de Especialidades Dr. Martín Gaitan</div></td><td><span class="tel">📞 777 314 2494</span></td><td>Jardín Juárez 7 Int.108, Pasaje Bella Vista, Centro</td><td class="horario"><strong>Lun–Vie</strong> 9am–2pm / 4–8pm<br><strong>Sáb</strong> 9am–2pm</td><td style="text-align:center;"><button class="btn-visita" onclick="toggleVisita(3)" id="btn-3"></button></td></tr>
+
+        <tr id="row-4"><td class="num">4</td><td><div class="nombre">TechnoDent Cuernavaca</div></td><td><span class="tel">📞 777 377 1733</span></td><td>Av. Morelos Nte. 900-214A, Centro</td><td class="horario"><strong>Lun–Vie</strong> 9am–7pm<br><strong>Sáb</strong> 9am–2pm</td><td style="text-align:center;"><button class="btn-visita" onclick="toggleVisita(4)" id="btn-4"></button></td></tr>
+
+        <tr id="row-5"><td class="num">5</td><td><div class="nombre">DM Dental</div></td><td><span class="tel">📞 777 134 2021</span></td><td>Matamoros 20-Loc 6, Centro</td><td class="horario"><strong>Lun–Vie</strong> 9am–6pm<br><strong>Sáb</strong> 10am–3pm</td><td style="text-align:center;"><button class="btn-visita" onclick="toggleVisita(5)" id="btn-5"></button></td></tr>
+
+        <tr id="row-6"><td class="num">6</td><td><div class="nombre">Consultorio Dental Servidental</div></td><td><span class="tel">📞 Sin teléfono</span></td><td>Matamoros 16, Centro</td><td class="horario"><strong>Lun–Vie</strong> 10am–2pm / 4–8pm<br><strong>Sáb</strong> 10am–3pm</td><td style="text-align:center;"><button class="btn-visita" onclick="toggleVisita(6)" id="btn-6"></button></td></tr>
+
+        <tr id="row-7"><td class="num">7</td><td><div class="nombre">Healteeth Cuernavaca</div></td><td><span class="tel">📞 777 310 3654</span></td><td>Av. Morelos 178-D-3, Plaza Esmeralda, Centro</td><td class="horario"><strong>Lun–Vie</strong> 9am–7pm<br><strong>Sáb</strong> 8am–3pm</td><td style="text-align:center;"><button class="btn-visita" onclick="toggleVisita(7)" id="btn-7"></button></td></tr>
+
+        <tr id="row-8"><td class="num">8</td><td><div class="nombre">Ríe Más | Dentista</div></td><td><span class="tel">📞 55 1488 4514</span></td><td>No Reelección Supermanzana 5A Local 8, Centro</td><td class="horario"><strong>Lun–Vie</strong> 10am–7pm<br><strong>Sáb</strong> 10am–3pm</td><td style="text-align:center;"><button class="btn-visita" onclick="toggleVisita(8)" id="btn-8"></button></td></tr>
+
+        <tr id="row-9"><td class="num">9</td><td><div class="nombre">Dental Stone Cuernavaca</div></td><td><span class="tel">📞 777 243 1843</span></td><td>Mariano Abasolo 38-Loc 1, Centro</td><td class="horario"><strong>Lun–Vie</strong> 9am–2pm / 4–7pm<br><strong>Sáb</strong> 9am–2pm</td><td style="text-align:center;"><button class="btn-visita" onclick="toggleVisita(9)" id="btn-9"></button></td></tr>
+
+        <tr id="row-10"><td class="num">10</td><td><div class="nombre">Dra. Yeni Rosas</div></td><td><span class="tel">📞 56 5946 4630</span></td><td>Av. José María Morelos 500, Centro</td><td class="horario"><strong>Lun</strong> 8:30am–6:30pm<br><strong>Vie</strong> 8:30am–6:30pm</td><td style="text-align:center;"><button class="btn-visita" onclick="toggleVisita(10)" id="btn-10"></button></td></tr>
+
+        <tr class="zona-header"><td colspan="6">📍 Delicias / Diana</td></tr>
+
+        <tr id="row-11"><td class="num">11</td><td><div class="nombre">Clínica Dental Ponce</div></td><td><span class="tel">📞 777 245 2922</span></td><td>Av. Diana 148, Delicias</td><td class="horario"><strong>Lun–Sáb</strong> 8am–8pm<br><strong>Dom</strong> 9am–2pm</td><td style="text-align:center;"><button class="btn-visita" onclick="toggleVisita(11)" id="btn-11"></button></td></tr>
+
+        <tr id="row-12"><td class="num">12</td><td><div class="nombre">Clínica Dental Health Solution</div></td><td><span class="tel">📞 777 243 7411</span></td><td>Av. Diana 4-A, Delicias</td><td class="horario"><strong>Lun–Vie</strong> 9am–5pm<br><strong>Sáb</strong> 9am–3pm</td><td style="text-align:center;"><button class="btn-visita" onclick="toggleVisita(12)" id="btn-12"></button></td></tr>
+
+        <tr id="row-13"><td class="num">13</td><td><div class="nombre">SonrisaD10</div></td><td><span class="tel">📞 777 209 9036</span></td><td>Av. Diana 783-Loc 12, Delicias</td><td class="horario"><strong>Lun/Mié–Vie</strong> 9am–7:30pm<br><strong>Mar</strong> 4–7:30pm · <strong>Sáb</strong> 10am–2pm</td><td style="text-align:center;"><button class="btn-visita" onclick="toggleVisita(13)" id="btn-13"></button></td></tr>
+
+        <tr class="zona-header"><td colspan="6">📍 Lomas de la Selva / Miraval</td></tr>
+
+        <tr id="row-14"><td class="num">14</td><td><div class="nombre">DentArte</div></td><td><span class="tel">📞 777 106 4522</span></td><td>G. Gómez Azcárate 204-Loc 1B, Lomas de la Selva</td><td class="horario"><strong>Lun–Vie</strong> 9am–9pm<br><strong>Sáb</strong> 9am–2pm</td><td style="text-align:center;"><button class="btn-visita" onclick="toggleVisita(14)" id="btn-14"></button></td></tr>
+
+        <tr id="row-15"><td class="num">15</td><td><div class="nombre">Atelier Dental Cuernavaca</div></td><td><span class="tel">📞 777 105 1506</span></td><td>Av. Vicente Guerrero 110-Of.1, Lomas de la Selva</td><td class="horario"><strong>Lun–Vie</strong> 10am–7pm<br><strong>Sáb</strong> 9am–2pm</td><td style="text-align:center;"><button class="btn-visita" onclick="toggleVisita(15)" id="btn-15"></button></td></tr>
+
+        <tr id="row-16"><td class="num">16</td><td><div class="nombre">DentaSalud Consultorio Dental</div></td><td><span class="tel">📞 777 210 1022</span></td><td>Gómez Azcárate 204-Int 207, Lomas de la Selva</td><td class="horario"><strong>Lun–Vie</strong> 9am–8pm<br><strong>Sáb</strong> 9am–3pm</td><td style="text-align:center;"><button class="btn-visita" onclick="toggleVisita(16)" id="btn-16"></button></td></tr>
+
+        <tr id="row-17"><td class="num">17</td><td><div class="nombre">Dental Smart</div></td><td><span class="tel">📞 777 259 7901</span></td><td>Gómez Azcárate 204-Int 103, Lomas de la Selva</td><td class="horario"><strong>Lun–Vie</strong> 9am–7pm<br><strong>Sáb</strong> 9am–3pm</td><td style="text-align:center;"><button class="btn-visita" onclick="toggleVisita(17)" id="btn-17"></button></td></tr>
+
+        <tr id="row-18"><td class="num">18</td><td><div class="nombre">Dentalikz</div></td><td><span class="tel">📞 777 220 9584</span></td><td>Gómez Azcárate 204-Int 103, Lomas de la Selva</td><td class="horario"><strong>Lun–Vie</strong> 9am–7pm<br><strong>Sáb</strong> 9am–2pm</td><td style="text-align:center;"><button class="btn-visita" onclick="toggleVisita(18)" id="btn-18"></button></td></tr>
+
+        <tr id="row-19"><td class="num">19</td><td><div class="nombre">Dra. Valeria Xancopinca – Ortodoncia UNAM</div></td><td><span class="tel">📞 777 170 4907</span></td><td>G. Gómez Azcárate 204, Lomas de la Selva</td><td class="horario"><strong>Lun–Vie</strong> 10am–7pm<br><strong>Sáb</strong> 9am–3pm</td><td style="text-align:center;"><button class="btn-visita" onclick="toggleVisita(19)" id="btn-19"></button></td></tr>
+
+        <tr id="row-20"><td class="num">20</td><td><div class="nombre">Dental Family</div></td><td><span class="tel">📞 777 168 4023</span></td><td>Herradura de Plata 124, Lomas de la Selva</td><td class="horario"><strong>Lun–Vie</strong> 10am–6pm<br><strong>Sáb</strong> 10am–3pm</td><td style="text-align:center;"><button class="btn-visita" onclick="toggleVisita(20)" id="btn-20"></button></td></tr>
+
+        <tr id="row-21"><td class="num">21</td><td><div class="nombre">GIRI DENTAL</div></td><td><span class="tel">📞 777 404 7067</span></td><td>Francisco I. Madero 703 Local 11, Miraval Plaza</td><td class="horario"><strong>Lun–Vie</strong> 10am–8pm<br><strong>Sáb</strong> 10am–2pm</td><td style="text-align:center;"><button class="btn-visita" onclick="toggleVisita(21)" id="btn-21"></button></td></tr>
+
+        <tr class="zona-header"><td colspan="6">📍 Vista Hermosa / Sumiya</td></tr>
+
+        <tr id="row-22"><td class="num">22</td><td><div class="nombre">Junco Odontología</div></td><td><span class="tel">📞 777 267 9679</span></td><td>Río Conchos 410, Vista Hermosa</td><td class="horario"><strong>Lun–Vie</strong> 9am–2pm / 4–8pm<br><strong>Sáb</strong> 9am–2pm</td><td style="text-align:center;"><button class="btn-visita" onclick="toggleVisita(22)" id="btn-22"></button></td></tr>
+
+        <tr id="row-23"><td class="num">23</td><td><div class="nombre">Mayo Dental Center</div></td><td><span class="tel">📞 777 189 9200</span></td><td>Av. Río Mayo 1110-Local B, Plaza Las Animas, Vista Hermosa</td><td class="horario"><strong>Lun–Vie</strong> 9am–7pm<br><strong>Sáb</strong> 9am–2pm</td><td style="text-align:center;"><button class="btn-visita" onclick="toggleVisita(23)" id="btn-23"></button></td></tr>
+
+        <tr id="row-24"><td class="num">24</td><td><div class="nombre">Consultorio Dental ABC</div></td><td><span class="tel">📞 777 429 2257</span></td><td>Av. Río Mayo 1306, Vista Hermosa</td><td class="horario"><strong>Lun–Vie</strong> 9am–7pm<br><strong>Sáb</strong> 10am–3pm</td><td style="text-align:center;"><button class="btn-visita" onclick="toggleVisita(24)" id="btn-24"></button></td></tr>
+
+        <tr id="row-25"><td class="num">25</td><td><div class="nombre">Spacio Dental Cuernavaca</div></td><td><span class="tel">📞 777 240 0983</span></td><td>Av. Río Mayo 1400, Vista Hermosa</td><td class="horario"><strong>Lun–Vie</strong> 10am–2pm / 4–7pm<br><strong>Sáb</strong> 10am–3:30pm</td><td style="text-align:center;"><button class="btn-visita" onclick="toggleVisita(25)" id="btn-25"></button></td></tr>
+
+        <tr id="row-26"><td class="num">26</td><td><div class="nombre">Dental Vista Hermosa</div></td><td><span class="tel">📞 777 169 3891</span></td><td>Río Pánuco 100A, Vista Hermosa</td><td class="horario"><strong>Horario</strong> por confirmar</td><td style="text-align:center;"><button class="btn-visita" onclick="toggleVisita(26)" id="btn-26"></button></td></tr>
+
+        <tr id="row-27"><td class="num">27</td><td><div class="nombre">Soluciones Dentales Cuernavaca</div></td><td><span class="tel">📞 777 246 6081</span></td><td>Av. San Diego 417 Local 3, Vista Hermosa</td><td class="horario"><strong>Lun–Sáb</strong> 9am–6pm</td><td style="text-align:center;"><button class="btn-visita" onclick="toggleVisita(27)" id="btn-27"></button></td></tr>
+
+        <tr id="row-28"><td class="num">28</td><td><div class="nombre">Salud Dental</div></td><td><span class="tel">📞 777 244 4431</span></td><td>Av. San Diego 103, Vista Hermosa</td><td class="horario"><strong>Lun–Vie</strong> 9am–7pm<br><strong>Sáb</strong> 9am–2pm</td><td style="text-align:center;"><button class="btn-visita" onclick="toggleVisita(28)" id="btn-28"></button></td></tr>
+
+        <tr id="row-29"><td class="num">29</td><td><div class="nombre">Dental Room 612</div></td><td><span class="tel">📞 Sin teléfono</span></td><td>Chilpancingo 105, Vista Hermosa</td><td class="horario"><strong>Lun–Vie</strong> 9am–6:30pm<br><strong>Sáb</strong> 10:30am–1pm</td><td style="text-align:center;"><button class="btn-visita" onclick="toggleVisita(29)" id="btn-29"></button></td></tr>
+
+        <tr class="zona-header"><td colspan="6">📍 Reforma / Chapultepec / Otras colonias</td></tr>
+
+        <tr id="row-30"><td class="num">30</td><td><div class="nombre">PolarDent</div></td><td><span class="tel">📞 777 430 7758</span></td><td>Estrada Cajigal 501-B, Reforma</td><td class="horario"><strong>Lun–Vie</strong> 8am–8pm<br><strong>Sáb</strong> 10am–5pm · <strong>Dom</strong> 12–5pm</td><td style="text-align:center;"><button class="btn-visita" onclick="toggleVisita(30)" id="btn-30"></button></td></tr>
+
+        <tr id="row-31"><td class="num">31</td><td><div class="nombre">Dr. Lenin Mejia – Prostodoncia Digital</div></td><td><span class="tel">📞 777 508 1091</span></td><td>Mazatepec 2, Reforma</td><td class="horario"><strong>Lun–Vie</strong> 10am–2pm / 4–8pm<br><strong>Sáb</strong> 10am–3pm</td><td style="text-align:center;"><button class="btn-visita" onclick="toggleVisita(31)" id="btn-31"></button></td></tr>
+
+        <tr id="row-32"><td class="num">32</td><td><div class="nombre">Clínica Dental Spekter</div></td><td><span class="tel">📞 777 159 8684</span></td><td>Av. Cuauhtémoc 121, Chapultepec</td><td class="horario"><strong>Lun–Vie</strong> 10am–2pm / 3–7pm<br><strong>Sáb</strong> 10am–5pm</td><td style="text-align:center;"><button class="btn-visita" onclick="toggleVisita(32)" id="btn-32"></button></td></tr>
+
+        <tr id="row-33"><td class="num">33</td><td><div class="nombre">Dra. Mayra Moreno ⭐</div></td><td><span class="tel">📞 777 187 5119</span></td><td>Av. Teopanzolco 408, Reforma, Cuernavaca 62260</td><td class="horario"><strong>Mar y Jue</strong> 10am–7pm</td><td style="text-align:center;"><button class="btn-visita" onclick="toggleVisita(33)" id="btn-33"></button></td></tr>
+
+      </tbody>
+    </table>
+  </div>
+  <div class="nota"><strong>Instrucciones:</strong> Haz clic en el círculo ✓ de la columna "Visitado" para marcar cada consultorio una vez entregada la muestra. El contador en el encabezado se actualiza automáticamente.</div>
+</main>
+<footer>Directorio elaborado para prospección comercial · <strong>Agua Desmineralizada</strong> · Cuernavaca, Morelos · Junio 2026</footer>
+<script>
+  const visitados=new Set();
+  function toggleVisita(id){
+    const btn=document.getElementById('btn-'+id);
+    const row=document.getElementById('row-'+id);
+    if(visitados.has(id)){visitados.delete(id);btn.classList.remove('hecho');row.classList.remove('visitado');}
+    else{visitados.add(id);btn.classList.add('hecho');row.classList.add('visitado');}
+    document.getElementById('contVisitados').textContent=visitados.size;
+  }
+</script>
+</body>
+</html>
